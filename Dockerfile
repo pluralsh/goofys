@@ -18,7 +18,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     fuse-overlayfs \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
- && echo "user_allow_other" >> /etc/fuse.conf /etc/fuse.conf
+ && echo "user_allow_other" >> /etc/fuse.conf
 
 # ENV GOOFYS_VERSION 0.24.0
 # RUN curl --fail -sSL -o /usr/local/bin/goofys https://github.com/kahing/goofys/releases/download/v${GOOFYS_VERSION}/goofys \
