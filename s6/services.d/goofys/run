@@ -1,5 +1,5 @@
 #!/usr/bin/with-contenv bash
-exec /usr/local/bin/goofys -f \
+exec /usr/local/bin/goofys \
   ${ENDPOINT:+--endpoint $ENDPOINT} \
   ${REGION:+--region $REGION} \
   ${EXTRA_OPTS:+$EXTRA_OPTS} \
