@@ -17,6 +17,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     curl \
     coreutils \
     git \
+    gnupg2 \
     musl-dev \
     fuse3 \
     fuse-overlayfs \
