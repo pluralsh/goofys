@@ -39,8 +39,10 @@ RUN export GNUPGHOME=/tmp/ \
  && chmod +x /tmp/s6-overlay-${S6_VERSION}-installer \
  && /tmp/s6-overlay-${S6_VERSION}-installer / \
  && rm /tmp/s6-overlay-${S6_VERSION}-installer.sig /tmp/s6-overlay-${S6_VERSION}-installer \
+ && touch /etc/mtab \
  && chown -R 65534:0 /usr/local/bin \
- && chown -R 65534:0 /etc/s6
+ && chown -R 65534:0 /etc/s6 \
+  && chown -R 65534:0 /etc/mtab
 
 RUN curl -sSL -o /usr/local/bin/catfs https://github.com/kahing/catfs/releases/download/v0.8.0/catfs && chmod +x /usr/local/bin/catfs
 
