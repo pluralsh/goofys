@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv bash
+exec /usr/local/bin/goofys -f \
+  ${ENDPOINT:+--endpoint $ENDPOINT} \
+  ${REGION:+--region $REGION} \
+  ${EXTRA_OPTS:+$EXTRA_OPTS} \
+  --stat-cache-ttl $STAT_CACHE_TTL \
+  --type-cache-ttl $TYPE_CACHE_TTL \
+  --dir-mode $DIR_MODE \
+  --file-mode $FILE_MODE \
+  --uid $UID \
+  --gid $GID \
+  -o $MOUNT_ACCESS \
+  $BUCKET \
+  $MOUNT_DIR
