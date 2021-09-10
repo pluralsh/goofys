@@ -26,8 +26,3 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 COPY --chown=65534:0 goofys /usr/local/bin/
 
 RUN curl -sSL -o /usr/local/bin/catfs https://github.com/kahing/catfs/releases/download/v0.8.0/catfs && chmod +x /usr/local/bin/catfs
-
-COPY --chown=65534:0 rootfs/ /
-
-ENTRYPOINT ["sh"]
-CMD ["/usr/bin/run.sh"]
